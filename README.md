@@ -1,6 +1,6 @@
 # Options Visualizer
 
-A simple interactive tool to visualize **option fair prices** and **profit/loss scenarios** using the Black-Scholes model.
+A simple interactive tool to visualize **option fair prices** and **profit/loss scenarios** using the Black-Scholes model.\
 You can try it live here: [Options Visualizer](https://dolledan.github.io/Options-Visualizer/)
 
 ## Features
