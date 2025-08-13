@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Options Visualizer - Black-Scholes-Model</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2>Options Profit Visualizer (Black-Scholes-Model)</h2>
+<div class="container">
+  <div>
+    <!-- Buy -->
+    <div class="controls">
+      <h3>Buy Parameters</h3>
+      <div class="control">
+        <label>Spot price S₀ <span id="s0-val" class="small">1.00</span></label>
+        <input id="s0" type="number" step="0.01" min="0.01" value="1.00">
+      </div>
+      <div class="control">
+        <label>Implied Vol (IV %) <span id="iv-val" class="small">40%</span></label>
+        <input id="iv" type="range" min="1" max="200" step="1" value="40">
+      </div>
+      <div class="control">
+        <label>Days to expiry <span id="days-val" class="small">30</span></label>
+        <input id="days" type="range" min="1" max="365" step="1" value="100">
+      </div>
+      <div class="control">
+        <label>Risk-free rate r (%) <span id="r-val" class="small">2.00%</span></label>
+        <input id="r" type="range" min="0" max="10" step="0.01" value="2.00">
+      </div>
+      <div class="control">
+        <label>Option type</label>
+        <select id="otype">
+          <option value="call">Call</option>
+          <option value="put">Put</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Sell -->
+    <div class="controls" style="margin-top:20px;">
+      <h3>Sell Parameters</h3>
+      <div class="control">
+        <label>Spot price S₀ <span id="s0-val2" class="small">1.00</span></label>
+        <input id="s02" type="number" step="0.01" min="0.01" value="1.20">
+      </div>
+      <div class="control">
+        <label>Implied Vol (IV %) <span id="iv-val2" class="small">40%</span></label>
+        <input id="iv2" type="range" min="1" max="200" step="1" value="40">
+      </div>
+      <div class="control">
+        <label>Days to expiry <span id="days-val2" class="small">30</span></label>
+        <input id="days2" type="range" min="1" max="365" step="1" value="30">
+      </div>
+      <div class="control">
+        <label>Risk-free rate r (%) <span id="r-val2" class="small">2.00%</span></label>
+        <input id="r2" type="range" min="0" max="10" step="0.01" value="2.00">
+      </div>
+    </div>
+  </div>
+
+  <div class="charts">
+    <div class="chartWrap">
+      <canvas id="priceChart" style="width:100%;height:100%"></canvas>
+    </div>
+    
+    <div class="chartWrap" style="margin-top:20px;">
+      <canvas id="pnlChart" style="width:100%;height:100%"></canvas>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"> </script>
+</body>
+</html>
