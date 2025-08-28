@@ -102,7 +102,7 @@ function addOption(type='call', strike=1.00, days=100){
   optionDiv.innerHTML = `
     <div style="display:flex;justify-content:space-between;align-items:center;">
       <h4>Option ${optionCount}</h4>
-      <button class="remove-btn" data-id="${optionCount}">❌</button>
+      <button class="remove-btn" data-id="${optionCount}">x</button>
     </div>
     <div class="control">
       <label>Option type</label>
